@@ -13,9 +13,6 @@ const mobile = document.querySelector('.mobile')
 
 let currentIndex;
 
-webs.forEach(web => web.style.opacity = 0)
-mobile.style.opacity = 0;
-
 function rise(){
     intro.classList.add("rise");
 }
