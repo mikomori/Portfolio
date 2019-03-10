@@ -1,0 +1,309 @@
+@import url("https://fonts.googleapis.com/css?family=Inconsolata");
+
+$primaryColor: rgba(86, 86, 86, 0.7);
+$border: 2px solid $primaryColor;
+$boldBorder: 4px solid $primaryColor;
+$lightBorder: 1.5px solid $primaryColor;
+
+%hover {
+    background: rgba(228, 197, 250, 0.3);
+    cursor: pointer;
+}
+
+%image {
+    width: 50%;
+    padding: 2px;
+    border-right: $border;
+    img {
+        width: 100%;
+    }
+}
+
+.rise {
+    margin-top: 70px !important;
+    margin-bottom: 20px !important;
+}
+
+.expand {
+    opacity: 1 !important;
+    height: 160px !important;
+}
+
+body {
+    font-family: "Inconsolata", sans-serif;
+    font-weight: 300;
+    color: $primaryColor;
+    box-sizing: border-box;
+    background:white;
+}
+body,
+h1,
+h2,
+p {
+    margin: 0;
+    padding: 0;
+}
+a{
+    color:rgb(170, 89, 245);
+    text-decoration: none;
+}
+img{
+    cursor: pointer;
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 1000px;
+    margin: auto;
+    
+    .intro {
+        width: 100%;
+        transition: 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+        margin-top: 30vh;
+        margin-bottom: 70vh;
+        height: 0;
+        overflow: hidden;
+        border-top: $border;
+        border-bottom: $border;
+
+        .main {
+            display: flex;
+            width: 100%;
+            border-bottom: $border;
+            .left {
+                width: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-right: $border;
+                padding: 7px 0;
+                h1 {
+                    font-size: 60px;
+                    letter-spacing: 4px;
+                    padding-right: 10px;
+                    font-family: "Inconsolata", sans-serif;
+                    font-weight: normal;
+                }
+                div {
+                    p:first-of-type {
+                        font-size: 30px;
+                        letter-spacing: 2px;
+                        font-weight: bold;
+                    }
+                }
+            }
+            .right {
+                @extend .left;
+                flex-direction: column;
+                align-items: center;
+                border: none;
+
+                p:first-of-type {
+                    width: 100%;
+                    border-bottom: $border;
+                    text-align: center;
+                    font-weight: bold;
+                    letter-spacing: 3px;
+                    padding-bottom: 10px;
+                }
+                p:last-of-type {
+                    padding-top: 10px;
+                    letter-spacing: 1px;
+                }
+            }
+        }
+        .skill {
+            width: 100%;
+            padding-top: 15px;
+            h2 {
+                margin-left: 145px;
+                margin-bottom: 20px;
+                font-size: 16px;
+                letter-spacing: 4px;
+            }
+            div {
+                display: flex;
+                justify-content: space-between;
+                align-content: center;
+                margin:auto;
+                width:700px;
+                p {
+                    letter-spacing: 2px;
+                    font-weight: bold;
+                    line-height: 20px;
+                }
+                p:last-of-type {
+                    border: none;
+                }
+                .divider{
+                    width:2px;
+                    height: 30px;
+                    background:$primaryColor;
+                }
+            }
+        }
+    }
+
+    .web {
+        border: $border;
+        width: 100%;
+        margin-top: 50px;
+        display: flex;
+        .image {
+            @extend %image;
+        }
+        .info {
+            width: 50%;
+            .description {
+                padding: 20px 30px;
+                border-bottom: $border;
+                margin-bottom: 24px;
+                p:first-of-type {
+                    font-weight: bold;
+                    font-size: 20px;
+                    letter-spacing: 4px;
+                }
+                p:last-of-type {
+                    margin-top: 10px;
+                    font-size: 14px;
+                }
+            }
+            .link,
+            .github {
+                display: block;
+                padding: 10px 30px;
+                letter-spacing: 1px;
+                transition: 0.3s;
+                font-size: 14px;
+                &:hover {
+                    @extend %hover;
+                }
+            }
+            .tech {
+                padding: 15px 30px;
+                letter-spacing: 2px;
+                font-weight: bold;
+                font-size: 14px;
+            }
+            .para{
+                margin-left: 30px;
+            }
+        }
+    }
+    .mobile {
+        border: $border;
+        width: 100%;
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .info{
+            display: flex;
+            border-bottom: $border;
+
+            .description {
+                flex: 2;
+                padding: 20px 30px;
+                border-right: $border;
+                p:first-of-type {
+                    font-weight: bold;
+                    font-size: 20px;
+                    letter-spacing: 4px;
+                }
+                p:last-of-type {
+                    margin-top: 10px;
+                    font-size: 14px;
+                    line-height: 16px;
+                }
+            }
+            .details{
+                flex: 1;
+                display:flex;
+                flex-direction: column;
+                justify-content: center;
+                a{
+
+                    display: block;
+                    letter-spacing: 2px;
+                    font-size: 14px;
+                    padding:10px 30px;
+                    margin-top: 5px;
+                    transition:0.3s;
+                    &:hover{
+                        @extend %hover;
+                    }
+                }
+                .tech {
+                    letter-spacing: 2px;
+                    font-weight: bold;
+                    font-size: 14px;
+                    width:100%;
+                    padding: 10px 30px;
+                }
+            }
+        }
+        .images {
+            text-align: center;
+            padding: 20px 0;
+            .image {
+                width: 17%;
+                margin:5px;
+                display: inline-block;
+                img{
+                    width:100%
+                }
+            }
+        }
+    }
+    .gap {
+        height: 100px;
+    }
+}
+
+.lightbox{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top:0;
+    left:0;
+    background:rgba(0, 0, 0, 0.7);
+    z-index: -10;
+    opacity: 0;
+    transition: opacity 0.5s;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    .display {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        #left,
+        #right {
+            cursor: pointer;
+            margin: 20px;
+            font-size: 50px;
+            color: rgba(255, 255, 255, 0.714);
+            user-select: none;
+        }
+            img {
+                height: 90vh;
+            }
+    }
+    #cross {
+        position: absolute;
+        right: 24px;
+        top: 10px;
+        font-size: 40px;
+        cursor: pointer;
+        color: rgba(255, 255, 255, 0.714);
+    }
+}
+.showImage{
+    z-index: 10;
+    opacity: 1;
+}
