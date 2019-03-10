@@ -43,9 +43,17 @@ p {
     margin: 0;
     padding: 0;
 }
-a {
+%link{
     color: rgb(170, 89, 245);
     text-decoration: none;
+    display: block;
+    padding: 10px 30px;
+    letter-spacing: 1px;
+    transition: 0.3s;
+    font-size: 14px;
+    &:hover {
+        @extend %hover;
+    }
 }
 img {
     cursor: pointer;
@@ -171,16 +179,8 @@ img {
                     font-size: 14px;
                 }
             }
-            .link,
-            .github {
-                display: block;
-                padding: 10px 30px;
-                letter-spacing: 1px;
-                transition: 0.3s;
-                font-size: 14px;
-                &:hover {
-                    @extend %hover;
-                }
+            a {
+                @extend %link;
             }
             .tech {
                 padding: 15px 30px;
@@ -200,13 +200,13 @@ img {
         display: flex;
         flex-direction: column;
         align-items: center;
-        opacity:0;
+        opacity: 0;
         .info {
             display: flex;
             border-bottom: $border;
 
             .description {
-                flex: 4;
+                flex: 1.2;
                 padding: 20px 30px;
                 border-right: $border;
                 p:first-of-type {
@@ -220,14 +220,22 @@ img {
                     line-height: 16px;
                 }
             }
-            .tech {
-                flex:1;
-                letter-spacing: 2px;
-                font-weight: bold;
-                font-size: 14px;
-                display:flex;
+            .details {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                display: flex;
                 justify-content: center;
-                align-items: center;
+                padding-top: 10px;
+                a {
+                    @extend %link;
+                }
+                .tech {
+                    letter-spacing: 2px;
+                    font-weight: bold;
+                    font-size: 14px;
+                    margin:15px 0 15px 30px;
+                }
             }
         }
         .images {
