@@ -34,7 +34,7 @@ body {
     font-weight: 300;
     color: $primaryColor;
     box-sizing: border-box;
-    background:white;
+    background: white;
 }
 body,
 h1,
@@ -43,11 +43,11 @@ p {
     margin: 0;
     padding: 0;
 }
-a{
-    color:rgb(170, 89, 245);
+a {
+    color: rgb(170, 89, 245);
     text-decoration: none;
 }
-img{
+img {
     cursor: pointer;
 }
 
@@ -57,7 +57,7 @@ img{
     flex-direction: column;
     width: 1000px;
     margin: auto;
-    
+
     .intro {
         width: 100%;
         transition: 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
@@ -127,8 +127,8 @@ img{
                 display: flex;
                 justify-content: space-between;
                 align-content: center;
-                margin:auto;
-                width:700px;
+                margin: auto;
+                width: 700px;
                 p {
                     letter-spacing: 2px;
                     font-weight: bold;
@@ -137,10 +137,10 @@ img{
                 p:last-of-type {
                     border: none;
                 }
-                .divider{
-                    width:2px;
+                .divider {
+                    width: 2px;
                     height: 30px;
-                    background:$primaryColor;
+                    background: $primaryColor;
                 }
             }
         }
@@ -187,7 +187,7 @@ img{
                 font-weight: bold;
                 font-size: 14px;
             }
-            .para{
+            .para {
                 margin-left: 30px;
             }
         }
@@ -199,12 +199,12 @@ img{
         display: flex;
         flex-direction: column;
         align-items: center;
-        .info{
+        .info {
             display: flex;
             border-bottom: $border;
 
             .description {
-                flex: 2;
+                flex: 4;
                 padding: 20px 30px;
                 border-right: $border;
                 p:first-of-type {
@@ -218,30 +218,14 @@ img{
                     line-height: 16px;
                 }
             }
-            .details{
-                flex: 1;
+            .tech {
+                flex:1;
+                letter-spacing: 2px;
+                font-weight: bold;
+                font-size: 14px;
                 display:flex;
-                flex-direction: column;
                 justify-content: center;
-                a{
-
-                    display: block;
-                    letter-spacing: 2px;
-                    font-size: 14px;
-                    padding:10px 30px;
-                    margin-top: 5px;
-                    transition:0.3s;
-                    &:hover{
-                        @extend %hover;
-                    }
-                }
-                .tech {
-                    letter-spacing: 2px;
-                    font-weight: bold;
-                    font-size: 14px;
-                    width:100%;
-                    padding: 10px 30px;
-                }
+                align-items: center;
             }
         }
         .images {
@@ -249,10 +233,10 @@ img{
             padding: 20px 0;
             .image {
                 width: 17%;
-                margin:5px;
+                margin: 5px;
                 display: inline-block;
-                img{
-                    width:100%
+                img {
+                    width: 100%;
                 }
             }
         }
@@ -262,17 +246,17 @@ img{
     }
 }
 
-.lightbox{
+.lightbox {
     position: fixed;
     width: 100%;
     height: 100vh;
-    top:0;
-    left:0;
-    background:rgba(0, 0, 0, 0.7);
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.7);
     z-index: -10;
     opacity: 0;
     transition: opacity 0.5s;
-    display:flex;
+    display: flex;
     align-items: center;
     justify-content: center;
     user-select: none;
@@ -290,9 +274,9 @@ img{
             color: rgba(255, 255, 255, 0.714);
             user-select: none;
         }
-            img {
-                height: 90vh;
-            }
+        img {
+            height: 90vh;
+        }
     }
     #cross {
         position: absolute;
@@ -303,7 +287,7 @@ img{
         color: rgba(255, 255, 255, 0.714);
     }
 }
-.showImage{
+.showImage {
     z-index: 10;
     opacity: 1;
 }
