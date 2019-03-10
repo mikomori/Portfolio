@@ -7,14 +7,22 @@ const lightboxItem = document.querySelector('.lightbox #item')
 const cross = document.querySelector('#cross')
 const left = document.querySelector('#left')
 const right = document.querySelector('#right')
+const webs = document.querySelectorAll('.web')
+const mobile = document.querySelector('.mobile')
+
 
 let currentIndex;
+
+webs.forEach(web => web.style.opacity = 0)
+mobile.style.opacity = 0;
 
 function rise(){
     intro.classList.add("rise");
 }
 function expand(){
-    intro.classList.add('expand')
+    intro.classList.add('expand');
+    webs.forEach(web => web.style.opacity = 1)
+    mobile.style.opacity = 1;
 }
 setTimeout(expand, 100);
 setTimeout(rise, 1000);
